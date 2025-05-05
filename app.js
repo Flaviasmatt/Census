@@ -1,4 +1,5 @@
 require('dotenv').config();
+require('./models'); // Faz a conexão com o banco ao iniciar
 const express = require('express');
 const app = express();
 const indexRouter = require('./routes/index');
