@@ -3,10 +3,12 @@ require('./models'); // Faz a conexão com o banco ao iniciar
 const express = require('express');
 const app = express();
 const indexRouter = require('./routes/index');
+const participantsRouter = require('./routes/participants');
 
 app.use(express.json());
 
-// Rota principal
+// Rotas
+app.use('/participants', participantsRouter);
 app.use('/', indexRouter);
 
 const PORT = process.env.PORT || 3000;
